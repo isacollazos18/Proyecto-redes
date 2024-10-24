@@ -14,6 +14,7 @@ const pool = mysql.createPool({
     password: '',
     database: 'surtiquesosDB'
 });
+
 // Rutas para productos
 app.get('/productos', async (req, res) => {
     const conn = await pool.getConnection();
@@ -23,33 +24,30 @@ app.get('/productos', async (req, res) => {
 });
 app.get('/productos/:id', async (req, res) => {
     const conn = await pool.getConnection();
-    const [rows] = await conn.query('SELECT * FROM productos WHERE id = ?',
-    [req.params.id]);
+    const [rows] = await conn.query('SELECT * FROM productos WHERE id = ?', [req.params.id]);
     conn.release();
     if (rows.length === 0) return res.status(404).send('Producto no nencontrado');
         res.json(rows[0]);
 });
 app.post('/productos', async (req, res) => {
     const conn = await pool.getConnection();
-    const [result] = await conn.query('INSERT INTO productos VALUES (null, ?, ?,?)', [req.body.nombre, req.body.descripcion, req.body.precio]);
-    const [rows] = await conn.query('SELECT * FROM productos WHERE id = ?',
-    [result.insertId]);
+    const [result] = await conn.query('INSERT INTO productos VALUES (null, ?, ?,?)', [req.body.nombre, req.body.precio,  req.body.inventario]);
     conn.release();
-    res.json(rows[0]);
+    res.send('Producto creado');
 });
 app.put('/productos/:id', async (req, res) => {
     const conn = await pool.getConnection();
-    const [result] = await conn.query('UPDATE productos SET nombre=?, descripcion=?, precio=? WHERE id=?', [req.body.nombre, req.body.descripcion, req.body.precio, req.params.id]);
-    const [rows] = await conn.query('SELECT * FROM productos WHERE id = ?', [req.params.id]);
+    const [result] = await conn.query('UPDATE productos SET nombre=?, precio=?, inventario=? WHERE id=?', [ req.body.nombre, req.body.precio, req.body.inventario, req.params.id]);
     conn.release();
-    res.json(rows[0]);
+    res.send('Producto actualizado');
 });
 app.delete('/productos/:id', async (req, res) => {
     const conn = await pool.getConnection();
     const [rows] = await conn.query('DELETE FROM productos WHERE id = ?', [req.params.id]);
     conn.release();
-    res.send("producto borrado");
+    res.send("Producto borrado");
 });
+
 // Iniciar el servidor
 app.listen(app.get('port'), () => {
     console.log("Servidor funcionando");
