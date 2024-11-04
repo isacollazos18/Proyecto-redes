@@ -1,2 +1,5 @@
 
 /Backend/node_modules
+/Backend/Ordenes/node_modules
+/Backend/Productos/node_modules
+/Backend/Usuarios/node_modules

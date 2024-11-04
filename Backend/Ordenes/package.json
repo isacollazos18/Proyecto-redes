@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "ordenes",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "backend": "file:",
+    "axios": "^1.7.7",
     "express": "^4.21.1",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
