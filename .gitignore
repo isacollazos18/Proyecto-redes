@@ -1,2 +1,5 @@
 
 /Backend/node_modules
+/servidores/*
+/servidores/.vagrant/*
+servidores/.vagrant/machines/clienteUbuntu/virtualbox/vagrant_cwd

@@ -1,1 +1,1 @@
-{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/isabe/Desktop/Proyecto-redes/servidores","disabled":false,"__vagrantfile":true}}}
+{"virtualbox":{"/home/vagrant/appREST":{"guestpath":"/home/vagrant/appREST","hostpath":"C:/Users/Felipe/Desktop/Redes/Proyecto-redes/Backend","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/Felipe/Desktop/Redes/Proyecto-redes/servidores","disabled":false,"__vagrantfile":true}}}

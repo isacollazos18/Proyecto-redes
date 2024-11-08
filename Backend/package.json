@@ -1,7 +1,6 @@
 {
-  "name": "backend",
+  "name": "backendubuntu",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,11 +8,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
-    "backend": "file:",
+    "axios": "^1.7.7",
     "express": "^4.21.1",
+    "joi": "^17.13.3",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
-    "mysql2": "^3.11.3"
+    "mysql2": "^3.11.4"
   }
 }
