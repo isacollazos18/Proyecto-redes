@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/appFront":{"guestpath":"/home/vagrant/appFront","hostpath":"C:/Users/HOME/Desktop/PROYECTO/Proyecto-redes/servidores/appFront","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/HOME/Desktop/PROYECTO/Proyecto-redes/servidores","disabled":false,"__vagrantfile":true}}}

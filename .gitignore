@@ -3,3 +3,14 @@
 /Backend/Ordenes/node_modules
 /Backend/Productos/node_modules
 /Backend/Usuarios/node_modules
+Backend/Usuarios/package-lock.json
+Backend/Usuarios/package-lock.json
+/frontend
+*.json
+*.json
+/Backend/Usuarios
+*.json
+*.json
+/Backend
+*.json
+Backend/Ordenes/package-lock.json
